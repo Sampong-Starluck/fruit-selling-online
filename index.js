@@ -18,12 +18,12 @@ app.use(
     cookie: {
       path: "/",
       httpOnly: true,
-      maxAge: 1000 * 60 * 60, //hour
+      maxAge: 1000 * 60 * 60, // 1hour
       sameSite: true,
-      secure:false
+      secure: false
     },
     secret: "This is my spacial secret",
-    name: sid
+    name: "sid",
   })
 );
 
