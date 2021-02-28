@@ -17,19 +17,19 @@ const user = new schema({
     resgisterAt: {
         type: String,
         require: true
+    },
+    product: {
+        type: String,
+        require: true
+    },
+    price: {
+        type: String,
+        require: true
+    },
+    quantity: {
+        type: String,
+        require: true
     }
-    // product: {
-    //     type: String,
-    //     require: true
-    // },
-    // price: {
-    //     type: String,
-    //     require: true
-    // },
-    // quantity: {
-    //     type: String,
-    //     require: true
-    // }
 
 }, { collection: "user" });
 

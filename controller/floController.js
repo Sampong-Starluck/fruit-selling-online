@@ -41,7 +41,7 @@ exports.login = (req, res) => {
             if (result) {
                 // if user existed, check the given password with the encrypted password
                 bcrypt.compare(
-                    password, result[0].password, (err, passwordIsMatch) => {
+                    password, result.password, (err, passwordIsMatch) => {
                         if (passwordIsMatch) {
                             // if password is correct, return success, with cookie save
                             res.cookie("username", username, { expire: 3600 * 1000 });
@@ -74,7 +74,7 @@ exports.register = (req, res) => {
     const salt = bcrypt.genSaltSync(10);
     const date = new Date();
     if (password === confirm) {
-        const user = new user({
+        const users = new user({
             username: username,
             email: email,
             password: bcrypt.hashSync(password, salt),

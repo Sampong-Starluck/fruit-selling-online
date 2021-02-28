@@ -7,7 +7,7 @@ const floController = require("../controller/floController");// for controller
 // });
 
 // for register new User
-router.get('/register', floController.register);
+router.get('/register', floController.signUp);
 router.get('/login', floController.login);
 router.get('/logout', floController.logout);
 

@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(postRoutes);
 
 mongoose.connect(
-  "mongodb+srv://Sampong:Sampong3788@cluster0.gtkhs.mongodb.net/production?retryWrites=true&w=majority"
+    "mongodb+srv://Sampong:Samponglim3788@cluster0.gtkhs.mongodb.net/production?retryWrites=true&w=majority"
 ).then((result) => {
     app.listen(3000);
     console.log("Database is connected");
