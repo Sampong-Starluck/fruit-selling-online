@@ -32,7 +32,7 @@ app.set('view engine', 'ejs');
 app.set("views", "views");
 
 // set encoder and path for design and js
-app.use(bodyParser.urlencoded({ extended: tru }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
